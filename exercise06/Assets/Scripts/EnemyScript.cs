@@ -20,8 +20,8 @@ public class EnemyScript : MonoBehaviour
         newPositionTimer -= Time.deltaTime;
         if (newPositionTimer < 0)
         {
-            newPositionTimer = Random.Range(1, 15);
-            Vector3 randomPosition = RandomNavMeshLocation(Random.Range(5, 10));
+            newPositionTimer = Random.Range(1, 5);
+            Vector3 randomPosition = RandomNavMeshLocation(Random.Range(15, 80));
             nma.SetDestination(randomPosition);
         }
     }
