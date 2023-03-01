@@ -49,7 +49,7 @@ public class EnemyScript : MonoBehaviour
         if (other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
-            count
+           // count;
             gm.IncrementEnemyScore();
         }
     }
