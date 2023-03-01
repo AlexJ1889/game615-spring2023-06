@@ -46,7 +46,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectable"))
+        if (other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
            gm.IncrementEnemyScore();
