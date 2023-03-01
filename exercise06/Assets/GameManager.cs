@@ -12,16 +12,36 @@ public class GameManager : MonoBehaviour
     public TMP_Text enemyText;
     public TMP_Text timerText;
 
+    public float currentTime;
+    public bool countDown;
+
+    public bool hasLimit;
+    public float timerLimit;
+    public bool timeOver; 
+
     // Start is called before the first frame update
     void Start()
     {
 
+        enemyText.text = "enemy Score: " + enemyScore.ToString();
+        timeOver = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!timeOver)
+        {
+            currentTime = countDown ? currentTime - Time.deltaTime : currentTime + Time.deltaTime;
+        }
 
+        if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
+        {
+            currentTime = timerLimit;
+            SetTimerText();
+            timerText.color = Color.red;
+            enabled = false; 
+        }
     }
 
     public void IncrementPlayerScore()
@@ -32,7 +52,15 @@ public class GameManager : MonoBehaviour
 
     public void IncrementEnemyScore()
     {
-        enemyScore += 1;
-        enemyText.text = enemyScore.ToString();
+        enemyScore++; 
+        enemyText.text = enemyScore.ToString("enemy Score: " + "0");
+    }
+
+    private void SetTimerText()
+    {
+        if(currentTime > 0)
+        {
+            timerText.text = currentTime.ToString("Time Remaining: " + "0");
+        }
     }
 }

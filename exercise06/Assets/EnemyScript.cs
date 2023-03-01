@@ -8,10 +8,14 @@ public class EnemyScript : MonoBehaviour
     NavMeshAgent nma;
     float newPositionTimer = 0;
 
+    public GameManager gm;
+
+
     // Start is called before the first frame update
     void Start()
     {
         nma = gameObject.GetComponent<NavMeshAgent>();
+       
     }
 
     // Update is called once per frame
@@ -38,5 +42,15 @@ public class EnemyScript : MonoBehaviour
         }
 
         return finalPosition;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Collectible"))
+        {
+            Destroy(other.gameObject);
+            count
+            gm.IncrementEnemyScore();
+        }
     }
 }
