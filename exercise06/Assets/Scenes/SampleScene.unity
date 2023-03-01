@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.699936, g: 0.55918545, b: 0.38021097, a: 1}
+  m_IndirectSpecularColor: {r: 0.69981325, g: 0.55877304, b: 0.380202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6275,17 +6275,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 1744009806}
   m_VersionIndex: 12
   m_IsSelectable: 1
-  m_SelectedFaces: 98000000
-  m_SelectedEdges:
-  - a: 609
-    b: 610
-  - a: 610
-    b: 611
-  - a: 611
-    b: 608
-  - a: 608
-    b: 609
-  m_SelectedVertices: 61020000620200006302000060020000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &520622462
 Transform:
   m_ObjectHideFlags: 0
@@ -6701,7 +6693,6 @@ GameObject:
   m_Component:
   - component: {fileID: 953864059}
   - component: {fileID: 953864058}
-  - component: {fileID: 953864060}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6744,18 +6735,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &953864060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953864057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &965941494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6927,6 +6906,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a78430eec124cf6bb585b5bb034122, type: 3}
+--- !u!1 &1027861154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 6932095449148070135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1027861159 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 6932095449148070135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1027861161
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027861154}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1027861162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027861154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33ad37955dc24c01917692a92947caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1027861159}
+  gm: {fileID: 953864058}
 --- !u!43 &1048321312
 Mesh:
   m_ObjectHideFlags: 0

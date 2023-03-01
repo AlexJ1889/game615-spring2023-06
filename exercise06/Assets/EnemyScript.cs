@@ -15,7 +15,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         nma = gameObject.GetComponent<NavMeshAgent>();
-       
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -49,7 +49,8 @@ public class EnemyScript : MonoBehaviour
         if (other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
-           gm.IncrementEnemyScore();
+            gm.IncrementEnemyScore();
+            //enemyText.text = enemyScore.ToString();
         }
     }
 }

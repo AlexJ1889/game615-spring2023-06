@@ -84,14 +84,14 @@ public class GameManager : MonoBehaviour
     {
         enemyScore = 0;
         playerScore += 1;
-        playerText.text = playerScore.ToString();
+        playerText.text = playerScore.ToString("Player Score: " + "0");
     }
 
     public void IncrementEnemyScore()
     {
         enemyScore = 0;
         enemyScore += 1;
-        enemyText.text = enemyScore.ToString();
+        enemyText.text = enemyScore.ToString("enemy Score: " + "0");
     }
 
 
