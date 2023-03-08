@@ -87,7 +87,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             gm.IncrementPlayerScore();
-            gm.SetTimerText();
+           // gm.SetTimerText();
         }
     }
 }

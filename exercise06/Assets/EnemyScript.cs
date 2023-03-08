@@ -16,7 +16,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         nma = gameObject.GetComponent<NavMeshAgent>();
-        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+       // gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         
 

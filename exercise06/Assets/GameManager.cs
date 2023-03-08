@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
     public bool timeOver;
+  
 
     //public float TimeLeft;
     //public bool TimerOn = false;
@@ -33,11 +34,12 @@ public class GameManager : MonoBehaviour
 
         enemyText.text = "enemy Score: " + enemyScore.ToString();
         timeOver = false;
+        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         //    playerscore = 0;
         //    TimerOn = true;
         //    TimeLeft = 50;
         //    ScoreText.text = "0";
-     }
+    }
 
         // Update is called once per frame
         void Update()
