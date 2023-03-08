@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-        private void SetTimerText()
+    public void SetTimerText()
         {
             if (currentTime > 0)
             {

@@ -9,18 +9,25 @@ public class EnemyScript : MonoBehaviour
     float newPositionTimer = 0;
 
     public GameManager gm;
+  
 
 
     // Start is called before the first frame update
     void Start()
     {
         nma = gameObject.GetComponent<NavMeshAgent>();
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        
+
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
         newPositionTimer -= Time.deltaTime;
         if (newPositionTimer < 0)
         {
@@ -50,6 +57,8 @@ public class EnemyScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             gm.IncrementEnemyScore();
+            
+            
             //enemyText.text = enemyScore.ToString();
         }
     }
