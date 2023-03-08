@@ -8,6 +8,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
 
     public GameManager gm;
+    public float moveSpeed;
+    public float rotateSpeed;
    // public GameManager gmo;
 
 
@@ -26,6 +28,43 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        float hAxis = Input.GetAxis("Horizontal");
+        float vAxis = Input.GetAxis("Vertical");
+
+
+    
+        gameObject.transform.Translate(gameObject.transform.forward * Time.deltaTime * moveSpeed * vAxis, Space.World);
+
+        
+
+        gameObject.transform.Rotate(0, rotateSpeed * Time.deltaTime * hAxis, 0);
+
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            //gameObject.transform.Translate(gameObject.transform.forward*speed);
+            gameObject.transform.Rotate(rotateSpeed * Time.deltaTime * -1, 0, 0, Space.Self);
+            moveSpeed -= .01f;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            //gameObject.transform.Translate(gameObject.transform.forward*speed);
+            gameObject.transform.Rotate(rotateSpeed * Time.deltaTime, 0, 0, Space.Self);
+            moveSpeed += .1f;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            //gameObject.transform.Translate(gameObject.transform.forward*speed);
+            gameObject.transform.Rotate(0, rotateSpeed * Time.deltaTime * -1, 0, Space.Self);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            //gameObject.transform.Translate(gameObject.transform.forward*speed);
+            gameObject.transform.Rotate(0, rotateSpeed * Time.deltaTime, 0, Space.Self);
+
+        }
+
         //public float speed = 6f;
 
         //float horizontal = Input.GetAxisRaw("Horizontal");
