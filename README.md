@@ -2,7 +2,7 @@
  
 Partners: Mikki | Lex
 
-Playable Link: 
+Playable Link: https://alexj1889.github.io/game615-spring2023-06/exercise06/play/
 
 Win/Lose : whoever collects 5 coins first wins.
 
